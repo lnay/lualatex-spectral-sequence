@@ -1,7 +1,30 @@
 \documentclass{article}
 
+\usepackage{tabularx}
+\usepackage{tabularray}
+
 \begin{document}
 \section{Heading}
-
+ {
+  \newcolumntype{C}{>{\centering\arraybackslash}X}
+  \begin{tabularx}{\textwidth}{| C | C | C |}
+	  \hline
+	  Cell1 & Cell2               & Cell3        \\
+	  \hline
+	  Cell4 & Cell5               & CellCellCell \\
+	  \hline
+	  Cell7 & {Cell8\newline row} & Cell9        \\
+	  \hline
+  \end{tabularx}
+ }
+\begin{tblr}{ccc}
+	\hline
+	Cell1 & Cell2 & Cell3        \\
+	\hline
+	Cell4 & Cell5 & CellCellCell \\
+	\hline
+	Cell7 & Cell8 & Cell9        \\
+	\hline
+\end{tblr}
 
 \end{document}
